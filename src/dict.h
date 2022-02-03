@@ -67,16 +67,24 @@ typedef struct dictType {
 /* This is our hash table structure. Every dictionary has two of this as we
  * implement incremental rehashing, for the old to the new table. */
 typedef struct dictht {
+    //哈希表数组
     dictEntry **table;
+    //哈希表大小
     unsigned long size;
+    //哈希表大小掩码
     unsigned long sizemask;
+    //该哈希表已有节点的数量
     unsigned long used;
 } dictht;
 
 typedef struct dict {
+    // 类型特定函数
     dictType *type;
+    // 私有数据
     void *privdata;
+    // 哈希表
     dictht ht[2];
+    // rehash 索引，当rehash不再进行时，值为-1
     long rehashidx; /* rehashing not in progress if rehashidx == -1 */
     int iterators; /* number of iterators currently running */
 } dict;
