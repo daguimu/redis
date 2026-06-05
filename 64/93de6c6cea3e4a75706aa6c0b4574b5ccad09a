@@ -1,0 +1,15 @@
+src/commands.def
+  ai_agent 11596-11597,12108-12109
+tests/unit/introspection-2.tcl
+  ai_agent 292-318
+src/commands/delex.json
+  ai_agent 77,82
+src/commands/set.json
+  ai_agent 122,128
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.12",
+  "base_commit_sha": "6493de6c6cea3e4a75706aa6c0b4574b5ccad09a",
+  "prompts": {}
+}
